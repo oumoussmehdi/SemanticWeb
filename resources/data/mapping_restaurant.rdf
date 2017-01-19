@@ -1,0 +1,42 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://knowledgeweb.semanticweb.org/heterogeneity/alignment#">
+  <rdf:Description>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#has_address"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#has_address"/>
+    </j.0:mapTo>
+  </rdf:Description>
+  <rdf:Description>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#phone_number"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#phone_number"/>
+    </j.0:mapTo>
+  </rdf:Description>
+  <rdf:Description>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#name"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#name"/>
+    </j.0:mapTo>
+  </rdf:Description>
+  <rdf:Description>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#category"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity2 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#name"/>
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#has_category"/>
+    </j.0:mapTo>
+  </rdf:Description>
+  <rdf:Description>
+    <j.0:entity2 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#name"/>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#is_in_city"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#city"/>
+    </j.0:mapTo>
+  </rdf:Description>
+  <rdf:Description>
+    <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant1.owl#street"/>
+    <j.0:mapTo rdf:parseType="Resource">
+      <j.0:entity1 rdf:resource="http://www.okkam.org/ontology_restaurant2.owl#street"/>
+    </j.0:mapTo>
+  </rdf:Description>
+</rdf:RDF>

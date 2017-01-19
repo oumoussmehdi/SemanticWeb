@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontology_restaurant2 "http://www.okkam.org/ontology_restaurant2.owl#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:ontology_restaurant2="http://www.okkam.org/ontology_restaurant2.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     URI="http://www.okkam.org/ontology_restaurant2.owl">
+    <SubClassOf>
+        <Class URI="&ontology_restaurant2;Address"/>
+        <Class URI="&ontology_restaurant2;Location"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;Address"/>
+    </Declaration>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;Category"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_restaurant2;City"/>
+        <Class URI="&ontology_restaurant2;Location"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_restaurant2;City"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of cities</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;City"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_restaurant2;Location"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_restaurant2;Location"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of geographical locations</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;Location"/>
+    </Declaration>
+    <EntityAnnotation>
+        <Class URI="&ontology_restaurant2;Organization"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of organizations</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;Organization"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+        <Class URI="&ontology_restaurant2;Organization"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of restaurant</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+    </Declaration>
+    <AsymmetricObjectProperty>
+        <ObjectProperty URI="&ontology_restaurant2;has_address"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty URI="&ontology_restaurant2;has_address"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&ontology_restaurant2;has_address"/>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ontology_restaurant2;has_address"/>
+        <Class URI="&ontology_restaurant2;Address"/>
+    </ObjectPropertyRange>
+    <Declaration>
+        <ObjectProperty URI="&ontology_restaurant2;has_address"/>
+    </Declaration>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&ontology_restaurant2;has_category"/>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ontology_restaurant2;has_category"/>
+        <Class URI="&ontology_restaurant2;Category"/>
+    </ObjectPropertyRange>
+    <Declaration>
+        <ObjectProperty URI="&ontology_restaurant2;has_category"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_restaurant2;city"/>
+        <Class URI="&ontology_restaurant2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_restaurant2;city"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_restaurant2;city"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_restaurant2;name"/>
+        <ObjectIntersectionOf>
+            <Class URI="&ontology_restaurant2;Category"/>
+            <Class URI="&ontology_restaurant2;City"/>
+            <Class URI="&ontology_restaurant2;Restaurant"/>
+        </ObjectIntersectionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_restaurant2;name"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_restaurant2;name"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_restaurant2;phone_number"/>
+        <Class URI="&ontology_restaurant2;Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_restaurant2;phone_number"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_restaurant2;phone_number"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_restaurant2;street"/>
+        <Class URI="&ontology_restaurant2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_restaurant2;street"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_restaurant2;street"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

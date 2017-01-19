@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ontology_people2 "http://www.okkam.org/ontology_people2.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2006/12/owl2-xml#"
+     xml:base="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontology_people2="http://www.okkam.org/ontology_people2.owl#"
+     URI="http://www.okkam.org/ontology_people2.owl">
+    <SubClassOf>
+        <Class URI="&ontology_people2;Address"/>
+        <Class URI="&ontology_people2;Location"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&ontology_people2;Address"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Animal"/>
+        <Class URI="&ontology_people2;Living_being"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Animal"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of animals</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Animal"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;City"/>
+        <Class URI="&ontology_people2;Location"/>
+    </SubClassOf>
+    <Declaration>
+        <Class URI="&ontology_people2;City"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Country"/>
+        <Class URI="&ontology_people2;Location"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Country"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of countries</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Country"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Living_being"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Living_being"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of living beings</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Living_being"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Location"/>
+        <Class URI="&owl;Thing"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Location"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of geographical locations</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Location"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Person"/>
+        <Class URI="&ontology_people2;Animal"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Person"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of persons</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Person"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;State"/>
+        <Class URI="&ontology_people2;Location"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;State"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The class of States</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;State"/>
+    </Declaration>
+    <SubClassOf>
+        <Class URI="&ontology_people2;Suburb"/>
+        <Class URI="&ontology_people2;Location"/>
+    </SubClassOf>
+    <EntityAnnotation>
+        <Class URI="&ontology_people2;Suburb"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The residentail area of a person in a large city</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <Class URI="&ontology_people2;Suburb"/>
+    </Declaration>
+    <AsymmetricObjectProperty>
+        <ObjectProperty URI="&ontology_people2;has_address"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty URI="&ontology_people2;has_address"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty URI="&ontology_people2;has_address"/>
+        <Class URI="&ontology_people2;Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty URI="&ontology_people2;has_address"/>
+        <Class URI="&ontology_people2;Address"/>
+    </ObjectPropertyRange>
+    <Declaration>
+        <ObjectProperty URI="&ontology_people2;has_address"/>
+    </Declaration>
+    <FunctionalDataProperty>
+        <DataProperty URI="&ontology_people2;age"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;age"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;age"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <EntityAnnotation>
+        <DataProperty URI="&ontology_people2;age"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The age of a person</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;age"/>
+    </Declaration>
+    <FunctionalDataProperty>
+        <DataProperty URI="&ontology_people2;date_of_birth"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;date_of_birth"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;date_of_birth"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <EntityAnnotation>
+        <DataProperty URI="&ontology_people2;date_of_birth"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The date of birth of a person</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;date_of_birth"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;given_name"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;given_name"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <EntityAnnotation>
+        <DataProperty URI="&ontology_people2;given_name"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The given name of a person</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;given_name"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;house_number"/>
+        <Class URI="&ontology_people2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;house_number"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;house_number"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;name"/>
+        <ObjectIntersectionOf>
+            <Class URI="&ontology_people2;City"/>
+            <Class URI="&ontology_people2;Country"/>
+            <Class URI="&ontology_people2;State"/>
+            <Class URI="&ontology_people2;Suburb"/>
+        </ObjectIntersectionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;name"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;name"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;phone_numer"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;phone_numer"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;phone_numer"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;postcode"/>
+        <Class URI="&ontology_people2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;postcode"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;postcode"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;soc_sec_id"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;soc_sec_id"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;soc_sec_id"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;state"/>
+        <Class URI="&ontology_people2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;state"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;state"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;street"/>
+        <Class URI="&ontology_people2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;street"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;street"/>
+    </Declaration>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;suburb"/>
+        <Class URI="&ontology_people2;Address"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;suburb"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;suburb"/>
+    </Declaration>
+    <FunctionalDataProperty>
+        <DataProperty URI="&ontology_people2;surname"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty URI="&ontology_people2;surname"/>
+        <Class URI="&ontology_people2;Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty URI="&ontology_people2;surname"/>
+        <Datatype URI="&xsd;string"/>
+    </DataPropertyRange>
+    <EntityAnnotation>
+        <DataProperty URI="&ontology_people2;surname"/>
+        <Annotation annotationURI="&rdfs;comment">
+            <Constant
+                >The surname of a person</Constant>
+        </Annotation>
+    </EntityAnnotation>
+    <Declaration>
+        <DataProperty URI="&ontology_people2;surname"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

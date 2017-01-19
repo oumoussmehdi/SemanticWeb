@@ -1,0 +1,10 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#">
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#street"/>
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#phone_number"/>
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#has_address"/>
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#is_in_city"/>
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#name"/>
+  <owl:FunctionalProperty rdf:about="http://www.okkam.org/ontology_restaurant1.owl#category"/>
+</rdf:RDF>
